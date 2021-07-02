@@ -1,0 +1,16 @@
+.container{
+    background-color:rgb(131, 37, 238);
+     padding-left: 250px;
+     font-size: x-large;
+     font-weight: bold;
+     font-style: italic;
+}
+
+.Title{
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  font-size: xx-large;
+}
