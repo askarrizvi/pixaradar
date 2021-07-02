@@ -2,28 +2,110 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="./assets/css/style.css" />
-  <title>Project 1</title>
-</head>
-
-<body class="flex-column min-100-vh">
-  <header class="hero">
-    <h1 class="app-title"><i class="fab fa-github"></i> Project 1</h1>
-  </header>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./style.css" />
+    </head>
 
 
-  <main class="flex-row justify-space-between">
-      <div></div>
-  </main>
+    <img src=".image/index.html" alt="" class=logo>
+    <body class="flex-column min-100-vh">
+         
 
-  <div class="container">
-      
-  </div>
+    <div class= "container">
+        <body class="min-100-vh">
+        <header class="hero">
+            <h1 class="app-title"><i class="fab fa-github"></i> Pixa Radar</h1>
+        </header>
+           
+            
+        <main class="flex-row justify-space-between">
 
-  <script src="./assets/js/script.js"></script>
-</body>
-
-</html>
+        <div class = "Genre"></div>           
+         <p>What Genre are you intersted in today?<br> Pick one</p>
+          <input type="radio" name="genre-comedy" id="comedy" />
+          <label for="genre-comedy">Comedy</label><br>
+    
+          <input type="radio" name="genre-horror" id="horror" />
+          <label for="genre-horror">Horror</label><br>
+    
+          <input type="radio" name="genre-action" id="action" />
+          <label for="genre-sction">Action</label><br>
+  
+          <input type="radio" name="genre-drama" id="drama" />
+          <label for="genre-drama">Drama</label>
+  <br>
+  <br>
+        <div class="Weather"> 
+            <select name="task-type" class="select-dropdown">
+                 <h1> <option value="" selected>What is the weather today?</h1>
+                <option value="Sun">Sun</option>
+                 
+                  <option value="rain">Raining</option>
+                 
+                  <option value="cloud">Cloudy</option>
+                 
+                  <option value="snow">Snowing</option>
+            </select>
+            </div>
+        
+        <br>
+        <br>
+            <div class="TimeofDay">
+                <select name="task-type" class="select-dropdown">
+                   <h1> <option value="" selected>What is the time of day?</h1>
+                    <option value="morning">Morning</option>
+            
+                    <option value="afternoon">Afternoon</option>
+            
+                    <option value="evening">Evening</option>
+            
+                    <option value="lateNight">Late Night</option>
+            </select>
+            </div>  
+ <br>
+ 
+           <div class="CurrentMood"></div>
+            <p> What mood are you in today?<br> Pick one.</p>
+                <input class="radio-emoji happy" type="radio" name="radio-group" id="radio-1" value="happy" />
+                 <label for="radio-1">Happy</label><br>
+                
+ 
+               <input class="radio-emoji tired" type="radio" name="radio-group" id="radio-2" value="ok" checked="checked" />
+               <label for="radio-2">Tired</label><br>
+              
+              <input class="radio-emoji sad" type="radio" name="radio-group" id="radio-3" value="sad" />
+              <label for="radio-3">Sad</label><br>
+             
+              <input class="radio-emoji mad" type="radio" name="radio-group" id="radio-3" value="sad" />
+              <label for="radio-3">Mad</label><br>
+            
+              <input class="radio-emoji indifferent" type="radio" name="radio-group" id="radio-3" value="sad" />
+              <label for="radio-3">indifferent</label><br>
+            <br>
+            <br>
+            <button class="btn" id="save-weather" type="submit" draggable="true">Submit</button>
+            
+        <script src="./assets/js/script.js"></script>
+        </body>
+        
+        </html>
+        
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
