@@ -9,17 +9,19 @@
     </head>
 
 
-    <img href="https://app.brandmark.io/v3/#logo_data=%7B%22keywords%22%3A%22movies%20mood%20weather%22%2C%22id%22%3A%22logo-43671d55-79ce-45e7-a4bd-59972ed5d3bf%22%2C%22layout%22%3A0%2C%22title%22%3A%22PIXARRADAR%22%2C%22titleFamily%22%3A%22Montserrat%20Light%20Alt1%22%2C%22titleVariant%22%3A%22300%22%2C%22titleColor%22%3A%5B%7B%22hex%22%3A%22%23302d28%22%2C%22location%22%3A0%7D%2C%7B%22hex%22%3A%22%23e6dfcd%22%2C%22location%22%3A0%7D%2C%7B%22hex%22%3A%22%2359544e%22%2C%22location%22%3A0%7D%2C%7B%22hex%22%3A%22%23d0c9b9%22%2C%22location%22%3A1%7D%5D%2C%22titleScale%22%3A1.11%2C%22titleLetterSpace%22%3A0%2C%22titleLineSpace%22%3A1.1%2C%22titleBoldness%22%3A0%2C%22titleX%22%3A0%2C%22titleY%22%3A0%2C%22titleAlign%22%3A%22center%22%2C%22slogan%22%3A%22%22%2C%22sloganFamily%22%3A%22Montserrat%22%2C%22sloganVariant%22%3A%22400%22%2C%22sloganColor%22%3A%5B%7B%22hex%22%3A%22%2359544e%22%7D%5D%2C%22sloganScale%22%3A1%2C%22sloganLetterSpace%22%3A0%2C%22sloganLineSpace%22%3A1.1%2C%22sloganBoldness%22%3A0%2C%22sloganAlign%22%3A%22center%22%2C%22sloganX%22%3A0%2C%22sloganY%22%3A0%2C%22icon%22%3Anull%2C%22showIcon%22%3Afalse%2C%22iconScale%22%3A1%2C%22iconColor%22%3A%5B%7B%22hex%22%3A%22%23e6dfcd%22%7D%5D%2C%22iconContainer%22%3Anull%2C%22showIconContainer%22%3Afalse%2C%22iconContainerScale%22%3A1%2C%22iconContainerColor%22%3A%5B%7B%22hex%22%3A%22%23d0c9b9%22%7D%5D%2C%22iconSpace%22%3A1%2C%22iconX%22%3A0%2C%22iconY%22%3A0%2C%22nthChar%22%3A0%2C%22container%22%3Anull%2C%22showContainer%22%3Afalse%2C%22containerScale%22%3A1%2C%22containerColor%22%3A%5B%7B%22hex%22%3A%22%23d0c9b9%22%7D%5D%2C%22containerX%22%3A0%2C%22containerY%22%3A0%2C%22backgroundColor%22%3A%5B%7B%22hex%22%3A%22%23000000%22%7D%5D%2C%22palette%22%3A%5B%22%23000000%22%2C%22%23302d28%22%2C%22%23e6dfcd%22%2C%22%2359544e%22%2C%22%23d0c9b9%22%5D%7D alt="" class=logo>
+    
     <body class="flex-column min-100-vh">
          
 
     <div class= "container">
         <body class="min-100-vh">
-        <header class="hero">
-            <h1 class="app-title"><i class="fab fa-github"></i> Pixa Radar</h1>
-        </header>
-           
+       
             
+                <h1 class="title"><i class="fab fa-github"></i> Pixa Radar</h1>
+    <div class="bg-green-300 ...">
+        <div class="mix-blend-multiply bg-amber-300 ..."></div>
+    </div>
+            <img src="./icloud/movieproject/pixaradar.html" alt="" class=logo>
         <main class="flex-row justify-space-between">
 
         <div class = "Genre"></div>           
@@ -67,27 +69,33 @@
  <br>
  
            <div class="CurrentMood"></div>
-            <p> What mood are you in today?<br> Pick one.</p>
-                <input class="radio-emoji happy" type="radio" name="radio-group" id="radio-1" value="happy" />
-                 <label for="radio-1">Happy</label><br>
+        <p> What mood are you in today?<br> Pick one.
+            <div id="radio-button-wrapper">
+                <span class="image-radio">
+                 <input class="radio-emoji happu" type="radio" name="radio-group" id="radio-1" value="happy" />
+                    <label for="radio-1">😊</label><br>
+                    
+                </span>
+                <span class="image-radio">
+                 <input class="radio-emoji sad" type="radio" name="radio-group" id="radio-2" value="ok" checked="checked" />
+                    <label for="radio-2">😩</label><br>
+
+                <span class="image-radio"><img src="">
+                <input class="radio-emoji mad" type="radio" name="radio-group" id="radio-3" value="mad" />
+                <label for="radio-3">🤬</label><br>
                 
- 
-               <input class="radio-emoji tired" type="radio" name="radio-group" id="radio-2" value="ok" checked="checked" />
-               <label for="radio-2">Tired</label><br>
-              
-              <input class="radio-emoji sad" type="radio" name="radio-group" id="radio-3" value="sad" />
-              <label for="radio-3">Sad</label><br>
-             
-              <input class="radio-emoji mad" type="radio" name="radio-group" id="radio-3" value="sad" />
-              <label for="radio-3">Mad</label><br>
-            
-              <input class="radio-emoji indifferent" type="radio" name="radio-group" id="radio-3" value="sad" />
-              <label for="radio-3">indifferent</label><br>
+                </span>
+                <span class="image-radio"><img src="">
+                    <input class="radio-emoji indifferent" type="radio" name="radio-group4" id="radio-3" value="sad" />
+                    <label for="radio-3">😶</label><br>
+                    
+                </span>
+            </div>
             <br>
             <br>
-            <button class="btn" id="save-weather" type="submit" draggable="true">Submit</button>
+            <button class="submit_btn" id="save-answers" type="submit" draggable="true">Submit</button>
             
-        <script src="./assets/js/script.js"></script>
+        <script src="./script.js"></script>
         </body>
         
         </html>
