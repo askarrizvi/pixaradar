@@ -1,16 +1,21 @@
-.container{
-    background-color:rgb(131, 37, 238);
+ .container{
+    background-color:rgb(37, 141, 238);
      padding-left: 250px;
      font-size: x-large;
      font-weight: bold;
      font-style: italic;
 }
 
-.Title{
+.title{
+    padding-top: 30px;
     display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  list-style: none;
-  font-size: xx-large;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style: none;
+    font-size:2cm;
+    
+}
+
+span.image-radio input[type="radio"]:checked + img{
+    border:1px solid red;
 }
