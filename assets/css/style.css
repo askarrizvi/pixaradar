@@ -3,7 +3,7 @@
      padding-left: 250px;
      font-size: x-large;
      font-weight: bold;
-     font-style: italic;
+     
 }
 
 .title{
@@ -13,9 +13,9 @@
     align-items: center;
     list-style: none;
     font-size:2cm;
-    
+    font-style:italic;
 }
 
 span.image-radio input[type="radio"]:checked + img{
-    border:1px solid red;
+    border:1px solid #red;
 }
