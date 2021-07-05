@@ -1,5 +1,5 @@
  .container{
-    background-color:rgb(37, 141, 238);
+    background-color:rgb(37, 141, 238, 0.7) ;
      padding-left: 250px;
      font-size: x-large;
      font-weight: bold;
@@ -19,4 +19,27 @@
 
 span.image-radio input[type="radio"]:checked + img{
     border:1px solid red;
+}
+
+:root {
+    --shadow:0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    --ring-offset-shadow:0 0 #0000;
+    --ring-shadow:0 0 #0000;
+}
+
+.card_open {
+    animation-duration: 2s;
+    animation-name: card_open;
+}
+
+@keyframes card_open {
+    from {
+        height: 1%;
+        box-shadow: var(--shadow);
+    }
+
+    to {
+        height: 100%;
+        box-shadow: var(--ring-offset-shadow,0 0 #0000),var(--ring-shadow,0 0 #0000),var(--shadow);
+    }
 }
