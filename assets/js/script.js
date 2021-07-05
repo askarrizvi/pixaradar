@@ -1,5 +1,6 @@
 const apiKey = "4cf2360";
 var containerEl = document.querySelector(".container");
+var buttonEl = document.getElementById("#save-answers")
 
 function getMovie() {
     //var validMovie = false;
