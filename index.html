@@ -102,8 +102,8 @@
                     <!-- <button class="submit_btn" id="save-answers" type="submit" draggable="true">Submit</button> -->
 
                     <!-- Modal component -->          
-                    <div class="submit_btn" id="save-answers">
-                        <button id="card_open" class="py-8 px-8 bg-green-400 hover:bg-green-300 border-gray-500 text-blue-50 hover:text-white rounded-md block">Open a modal</button>
+                    <!-- <div class="submit_btn" id="save-answers"> -->
+                        <button id="card_open" class="py-8 px-8 mb-10 bg-green-400 hover:bg-green-300 border-gray-500 text-blue-50 hover:text-white rounded-md block">Open a modal</button>
 
                         <div id="card_panel" class="main-modal bg-gray-300 opacity-70 fixed w-full inset-0 z-50 overflow-hidden flex justify-center items-center hidden">
                             <div class="modal-container bg-white opacity-95 w-4/12 md:max-w-11/12 mx-auto rounded-xl z-50 overflow-y-auto">
@@ -125,7 +125,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    <!-- </div> -->
                 </main>
             </body>
         </div>
@@ -162,8 +162,8 @@
                 }
             };
 
-            card_open.addEventListener('click', modalState)
-            card_close.addEventListener('click', modalState)
+            card_open.addEventListener('click', modalState);
+            card_close.addEventListener('click', modalState);
         </script>                      
 
         <script src="./assets/js/script.js"></script>
