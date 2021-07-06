@@ -19,3 +19,14 @@
 span.image-radio input[type="radio"]:checked + img{
     border:1px solid red;
 }
+
+.background{
+  background-size: cover;
+  background: 1px;
+  background-attachment: fixed;
+  background-position: 80%;
+  width:300px;
+  height:300px;
+  font-size:18px;
+
+}
