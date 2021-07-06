@@ -12,6 +12,9 @@
 </head>
 
 
+    
+    <body class="flex-column min-100-vh">
+        
 
 <body class="min-100-vh flex-grow">
 
@@ -24,128 +27,116 @@
             <h1 class="text-center text-grey-600 text-6xl font-bold uppercase p-4 border-solid border-2 border-blue-400"><i class="fab fa-github"></i> Pixa Radar</h1>
 
             <div class="bg-green-300 ...">
-                <div class="mix-blend-multiply bg-amber-300 ..."></div>
+             <div class="mix-blend-multiply bg-amber-300 ..."></div>
             </div>
-            <!-- <img src="./image/pixaradar.html" alt="" class=logo> -->
-            <main class="px-10 py-5 w-full flex flex-col content-center items-center h-screen">
-
-                <div class="Genre "></div>
-
-                <p class="text-3xl">What Genre are you interested in today?</p>
-                <p class="font-bold text-2xl py-2">Pick one.</p>
-
-                <div class="cursor-pointer">
-                <input type="radio" name="genre-comedy" id="comedy" class="py-1" />
-                <label class="text-xl shadow" for="genre-comedy">Comedy</label><br>
-
-                <input type="radio" name="genre-horror" id="horror" class="py-1" />
-                <label class="text-xl" for="genre-horror">Horror</label><br>
-
-                <input type="radio" name="genre-action" id="action" class="py-1" />
-                <label class="text-xl" for="genre-sction">Action</label><br>
-
-                <input type="radio" name="genre-drama" id="drama" class="py-1" />
-                <label class="text-xl" for="genre-drama">Drama</label><br>
-
-                <input type="radio" name="genre-adult" id="adult" class="py-1" />
-                <label class="text-xl" for="genre-sction">Adult</label><br> <br>
-                <br>
-                </div>
+ 
+            <main class="flex-row justify-space-between">
             
-                <br>
+                 <section>
+                    <img src=".image/popcorn.jpeg"  alt="popcorn" width="300px" height="250px">
+                  </section>
+       
+        
+            <div class = "Genre"></div>           
+              <p>What Genre are you intersted in today?<br> Pick one</p>
+               <input type="radio" name="genre" id="" checked=checked />
+                <label for="genre">Comedy</label><br>
+    
+             <input type="radio" name="genre" id="" />
+              <label for="genre-horror">Horror</label><br>
+    
+               <input type="radio" name="genre" id="" />
+                <label for="genre">Action</label><br>
+  
+                 <input type="radio" name="genre" id="" />
+                <label for="genre">Drama</label><br>
 
-                <div class="CurrentMood"></div>
-                <p class="text-3xl"> What mood are you in today?</p>
-                <p class="font-bold text-2xl py-2">Pick one.</p> 
-                <div id="radio-button-wrapper" class=" cursor-pointer">
-                    <span class="image-radio py-2 cursor-pointer">
-                        <input class="radio-emoji happu" type="radio" name="radio-group" id="radio-1" value="happy" />
-                        <label for="radio-1">😊</label><br>
-
-                    </span>
-                    <span class="image-radio py-2">
-                        <input class="radio-emoji sad" type="radio" name="radio-group" id="radio-2" value="ok"
-                            checked="checked" />
-                        <label for="radio-2">😩</label><br>
-
-                        <span class="image-radio py-2"><img src="">
-                            <input class="radio-emoji mad" type="radio" name="radio-group" id="radio-3" value="mad" />
-                            <label for="radio-3">🤬</label><br>
-
-                        </span>
-                        <span class="image-radio py-2"><img src="">
-                            <input class="radio-emoji indifferent" type="radio" name="radio-group4" id="radio-3"
-                                value="sad" />
-                            <label for="radio-3">😶</label><br>
-
-                        </span>
-                </div>
-                <br>
-                <br>
-                <!-- <button class="submit_btn border-2" id="save-answers" type="submit" draggable="true">Submit</button> -->
-                
-                <button id="card_open" class="py-8 px-8 bg-green-400 hover:bg-green-300 border-gray-500 text-blue-50 hover:text-white rounded-md block">Submit</button>
+               <input type="radio" name="genre" id="" />
+              <label for="sction">Adult</label><br>
+  <br>
+  <br>
+          <div class="Weather"> 
+            <select name="task-type" class="select-dropdown">
+                 <h1> <option value="" selected>What is the weather today?</h1>
+                   <option value="Sun">Sun</option>
+                 
+                      <option value="rain">Raining</option>
+                 
+                        <option value="cloud">Cloudy</option>
+                 
+                         <option value="snow">Snowing</option>
+            </select>
+            </div>
+        
+        <br>
+        <br>
+            <div class="TimeofDay">
+                <select name="task-type" class="select-dropdown">
+                   <h1> <option value="" selected>What is the time of day?</h1>
+                    <option value="morning">Morning</option>
+            
+                      <option value="afternoon">Afternoon</option>
+            
+                         <option value="evening">Evening</option>
+            
+                    <option value="lateNight">Late Night</option>
+            </select>
+            </div>  
+ <br>
+ 
+           <div class="CurrentMood"></div>
+        <p> What mood are you in today?<br> Pick one.
+            <div id="radio-button-wrapper">
+                <span class="image-radio">
+                 <input class="radio-emoji happu" type="radio" name="radio-group" id="radio" value="html" checked=checked/>
+                    <label for="radio-1">😊</label><br>
                     
-                        <div id="card_panel" class="main-modal fixed w-full inset-0 z-50 overflow-hidden flex justify-center items-center hidden">
-                            <div class="modal-container bg-white w-4/12 md:max-w-11/12 mx-auto rounded-xl z-50 overflow-y-auto">
-                                <div class="modal-content py-4 text-left px-6">
-                                    <div class="flex justify-between items-center pb-3">
-                                        <p class="text-2xl font-bold text-gray-500">Your Movie Pick</p>
-                                        <div id="card_close" class="modal-close cursor-pointer z-50">
-                                            <svg class="fill-current text-gray-500" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
-                                                <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <div class="my-5 mr-5 ml-5 flex justify-center">
-                                        <p>Body</p>
-                                    </div>
-                                    <div class="flex justify-end pt-2 space-x-14">
-                                        <p>Enjoy!</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                </span>
+                <span class="image-radio">
+                 <input class="radio-emoji sad" type="radio" name="radio-group" id="radio" value="httml" checked="checked" />
+                    <label for="radio-2">😩</label><br>
+
+                <span class="image-radio"><img src="">
+                  <input class="radio-emoji mad" type="radio" name="radio-group" id="radio" value="html" />
+                   <label for="radio-3">🤬</label><br>
+                
+                </span>
+                <span class="image-radio"><img src="">
+                    <input class="radio-emoji indifferent" type="radio" name="radio-group" id="radio" value="html" />
+                      <label for="radio-3">😶</label><br>
                     
-                
-                <script>
-                    const card_open = document.getElementById('card_open')
-                    const card_close = document.getElementById('card_close')
-                    const card_panel = document.getElementById('card_panel')
-                
-                    function modalState() {
-                        if(card_panel.classList.contains('hidden')) {
-                            // Show modal
-                            card_panel.classList.remove('hidden')
-                            card_panel.classList.add('block')
-                
-                            // Delete button
-                            card_open.classList.add('hidden')
-                            card_open.classList.remove('block')
-                
-                            // Start animation open
-                            card_panel.classList.add('card_open')
-                        } else {
-                            // Delete modal
-                            card_panel.classList.add('hidden')
-                            card_panel.classList.remove('block')
-                
-                            // Show button
-                            card_open.classList.remove('hidden')
-                            card_open.classList.add('block')
-                
-                            // Remove animation open
-                            card_panel.classList.remove('card_open')
-                        }
-                    }
-                
-                    card_open.addEventListener('click', modalState)
-                    card_close.addEventListener('click', modalState)
-                </script>
+                </span>
+            </div>
+            <br>
+            <br>
+            <button class="submit_btn" id="save-answers" type="submit" draggable="true">Submit</button>
+           
+            
+           
 
-                <script src="./assets/js/script.js"></script>
-            </main>
+</body>
 
+
+            
+           
+
+        <script src="./script.js"></script>
         </body>
-
-</html>
+        
+        </html>
+        
+          
+          
+          
+          
+          
+        
+          
+          
+          
+          
+          
+          
+          
+          
+          
