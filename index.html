@@ -1,62 +1,138 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <title>Weather Dashbaord</title>
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Pixa Radar</title>
+    <link rel="stylesheet" href=".asstes/css/style.css" />
+    </head>
 
-<body>
-    <div class="container-fluid text-center text-light bg-dark">
-        <h1>Weather Dashboard</h1>
-    </div>
-    <div class="container">
-        <div class="clearfix">
-            <div class="col-4 float-left">
-                <nav class="navbar navbar-light bg-light shadow-lg p-3 mb-5 bg-white rounded">
-                    <h4>Search for a City:</h4>
-                    <form class="form-inline">
-                        <input id="city-input" class="form-control mr-sm-2" type="search" placeholder="Search"
-                            aria-label="Search">
-                        <button id="select-city" class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
-                    </form>
-                    <form id="searchhistory" class="mt-1">
-                         
-                    </form>
-                </nav>
-            </div>
-            <div class="col-8 float-right">
-                <div class="card bg-light text-dark p-2 rem shadow-lg p-3 mb-5 bg-white rounded"
-                    style="width: 710; height: 19rem;">
-                    <div id="current"></div>
-                     
-                    <div id="uvl-display"></div>
-                </div>
-                <br>
-                <h2>5-Day Forcast:</h2>
-                <div id="5day" class="row">
-                     
-                </div>
-            </div>
+
+    
+    <body class="flex-column min-100-vh">
+        
+
+    <div class= "container">
+        
+        <h1 class="title"><i class="fab fa-github"></i> Pixa Radar</h1>
+        <div class="bg-green-300 ...">
+            <div class="mix-blend-multiply bg-amber-300 ..."></div>
         </div>
-    </div>
+ 
+        <div class = background>
+            
+         </div>
+         
+            <main class="flex-row justify-space-between">
+            
+        <section>
+            <img src=".image/popcorn.jpeg"  alt="popcorn" width="300px" height="250px">
+            <img1>
+        </section>
+       
+        <main class="flex-row justify-space-between">
+        <div class = "Genre"></div>           
+         <p>What Genre are you intersted in today?<br> Pick one</p>
+          <input type="radio" name="genre" id="" checked=checked />
+          <label for="genre">Comedy</label><br>
+    
+          <input type="radio" name="genre" id="" />
+          <label for="genre-horror">Horror</label><br>
+    
+          <input type="radio" name="genre" id="" />
+          <label for="genre">Action</label><br>
+  
+          <input type="radio" name="genre" id="" />
+          <label for="genre">Drama</label><br>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script type="text/javascript" src="script.js"></script>
+        <input type="radio" name="genre" id="" />
+        <label for="sction">Adult</label><br>
+  <br>
+  <br>
+        <div class="Weather"> 
+            <select name="task-type" class="select-dropdown">
+                 <h1> <option value="" selected>What is the weather today?</h1>
+                <option value="Sun">Sun</option>
+                 
+                  <option value="rain">Raining</option>
+                 
+                  <option value="cloud">Cloudy</option>
+                 
+                  <option value="snow">Snowing</option>
+            </select>
+            </div>
+        
+        <br>
+        <br>
+            <div class="TimeofDay">
+                <select name="task-type" class="select-dropdown">
+                   <h1> <option value="" selected>What is the time of day?</h1>
+                    <option value="morning">Morning</option>
+            
+                    <option value="afternoon">Afternoon</option>
+            
+                    <option value="evening">Evening</option>
+            
+                    <option value="lateNight">Late Night</option>
+            </select>
+            </div>  
+ <br>
+ 
+           <div class="CurrentMood"></div>
+        <p> What mood are you in today?<br> Pick one.
+            <div id="radio-button-wrapper">
+                <span class="image-radio">
+                 <input class="radio-emoji happu" type="radio" name="radio-group" id="radio" value="html" checked=checked/>
+                    <label for="radio-1">😊</label><br>
+                    
+                </span>
+                <span class="image-radio">
+                 <input class="radio-emoji sad" type="radio" name="radio-group" id="radio" value="httml" checked="checked" />
+                    <label for="radio-2">😩</label><br>
+
+                <span class="image-radio"><img src="">
+                <input class="radio-emoji mad" type="radio" name="radio-group" id="radio" value="html" />
+                <label for="radio-3">🤬</label><br>
+                
+                </span>
+                <span class="image-radio"><img src="">
+                    <input class="radio-emoji indifferent" type="radio" name="radio-group" id="radio" value="html" />
+                    <label for="radio-3">😶</label><br>
+                    
+                </span>
+            </div>
+            <br>
+            <br>
+            <button class="submit_btn" id="save-answers" type="submit" draggable="true">Submit</button>
+           
+            
+           
+
 </body>
 
-</html>
+
+            
+           
+
+        <script src="./script.js"></script>
+        </body>
+        
+        </html>
+        
+          
+          
+          
+          
+          
+        
+          
+          
+          
+          
+          
+          
+          
+          
+          
