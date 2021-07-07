@@ -13,6 +13,8 @@ function displayMovie(movObj) {
     var favRow = $('<span>');
     var favText = $('<div>');
     favLink.attr('href', 'https://www.imdb.com/title/' + movObj.imdb);
+    favLink.addClass('p-10 mb-2 border-2 border-black')
+    favText.addClass('ml-10')
     favRow.addClass('flex')
     var movieImg = '<img class="md:object-scale-down h-48" id="theImg" src="https://image.tmdb.org/t/p/original/' + movObj.poster + '" />';
     favText.text(movObj.title);

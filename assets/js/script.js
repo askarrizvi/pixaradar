@@ -112,6 +112,7 @@ function addToFav(){
     if (!favArr.includes(lastMovieId)){
     favArr.unshift(lastMovieId);
     localStorage.setItem("favourites", JSON.stringify(favArr));
+    alert("Saved!");
     }
     else {
         alert("Movie is already in your favourites!");
