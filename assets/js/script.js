@@ -50,7 +50,7 @@ function getMovie() {
                             console.log(poster);
                             //$(".loading-text").hide();
                             $(".movie-link").append('<a href="https://www.imdb.com/title/' + imdbId + '">' + movieTitle + '</a>');
-                            $(".poster-container").append('<img id="theImg" src="https://image.tmdb.org/t/p/original/' + poster + '" />');
+                            $(".poster-container").append('<img class="md:object-scale-down h-48" id="theImg" src="https://image.tmdb.org/t/p/original/' + poster + '" />');
                             modalState();
                             break;
                         }
