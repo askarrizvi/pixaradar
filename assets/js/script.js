@@ -97,7 +97,7 @@ $("#save-answers").on('click', '#card_open', function () {
     if (!userGenre.includes(getMoodGenre(mood))) {
         userGenre.push(getMoodGenre(mood));
     }
-    console.log("UG: " + userGenre);
+    //console.log("UG: " + userGenre);
     //debugger
     getMovie();
 });
