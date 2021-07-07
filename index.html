@@ -3,128 +3,154 @@
 
 <head>
     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-       <title> Pixa Radar</title>
-        <link rel="stylesheet" href=".assets/css/style.css" />
-       </head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>pixaradar</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./src/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
 
 
-    
-    <body class="flex-column min-100-vh">
-        
 
-        <div class= "container">
-        
-          <h1 class="title"><i class="fab fa-github"></i> Pixa Radar</h1>
-            <div class="bg-green-300 ...">
-             <div class="mix-blend-multiply bg-amber-300 ..."></div>
-            </div>
- 
-            <main class="flex-row justify-space-between">
-            
-                 <section class = "hero">
-           
-            <div class = "Genre"></div>           
-              <p>What Genre are you intersted in today?<br> Pick one</p>
-               <input type="radio" name="genre" id="" checked=checked />
-                <label for="genre">Comedy</label><br>
-    
-             <input type="radio" name="genre" id="" />
-              <label for="genre-horror">Horror</label><br>
-    
-               <input type="radio" name="genre" id="" />
-                <label for="genre">Action</label><br>
-  
-                 <input type="radio" name="genre" id="" />
-                <label for="genre">Drama</label><br>
+<body style="background-image: url(https://source.unsplash.com/1600x900/?movie);">
 
-               <input type="radio" name="genre" id="" />
-              <label for="sction">Adult</label><br>
-  <br>
-  <br>
-          <div class="Weather"> 
-            <select name="task-type" class="select-dropdown">
-                 <h1> <option value="" selected>What is the weather today?</h1>
-                   <option value="Sun">Sun</option>
-                 
-                      <option value="rain">Raining</option>
-                 
-                        <option value="cloud">Cloudy</option>
-                 
-                         <option value="snow">Snowing</option>
-            </select>
-            </div>
-        
-        <br>
-        <br>
-            <div class="TimeofDay">
-                <select name="task-type" class="select-dropdown">
-                   <h1> <option value="" selected>What is the time of day?</h1>
-                    <option value="morning">Morning</option>
-            
-                      <option value="afternoon">Afternoon</option>
-            
-                         <option value="evening">Evening</option>
-            
-                    <option value="lateNight">Late Night</option>
-            </select>
-            </div>  
- <br>
- 
-           <div class="CurrentMood"></div>
-        <p> What mood are you in today?<br> Pick one.
-            <div id="radio-button-wrapper">
-                <span class="image-radio">
-                 <input class="radio-emoji happu" type="radio" name="radio-group" id="radio" value="html" checked=checked/>
-                    <label for="radio-1">😊</label><br>
-                    
-                </span>
-                <span class="image-radio">
-                 <input class="radio-emoji sad" type="radio" name="radio-group" id="radio" value="httml" checked="checked" />
-                    <label for="radio-2">😩</label><br>
+    <header>
+        <h1
+            class="text-center text-grey-600 text-6xl font-bold uppercase p-4 border-solid border-2 border-blue-400 bg-white bg-opacity-50">
+            <i class="fab fa-github"></i> Pixa Radar
+        </h1>
+    </header>
 
-                <span class="image-radio"><img src="">
-                  <input class="radio-emoji mad" type="radio" name="radio-group" id="radio" value="html" />
-                   <label for="radio-3">🤬</label><br>
-                
-                </span>
-                <span class="image-radio"><img src="">
-                    <input class="radio-emoji indifferent" type="radio" name="radio-group" id="radio" value="html" />
-                      <label for="radio-3">😶</label><br>
-                    
-                </span>
-            </div>
-            <br>
-            <br>
-            <button class="submit_btn" id="save-answers" type="submit" draggable="true">Submit</button>
-           
-            
-           
+    <div class="container flex grid grid-cols-1 bg-white bg-opacity-50 content-center">
 
+        <div class="flex bg-fixed bg-cover bg-opacity-100 mix-blend-multiply col-span-2 w-full">
+
+
+
+
+            <!-- NOT SURE WHAT THIS IS FOR...? -->
+            <!-- <div class="bg-green-300 ...">
+                <div class="mix-blend-multiply bg-amber-300 ..."></div>
+                </div> -->
+
+            <main class="px-10 py-5 w-full flex flex-col content-center items-center h-screen">
+                <div class="Genre">
+                    <p class="text-3xl">
+                        What Genre are you interested in today?
+                    </p>
+                    <br>
+                    <p class="text-2xl font-bold py-2">
+                        Pick one.
+                    </p>
+
+                    <input type="radio" name="genre" id="comedy" value="Comedy" checked=checked />
+                    <label class="text-xl px-2" for="comedy">Comedy</label><br>
+
+                    <input type="radio" name="genre" id="horror" value="Horror" />
+                    <label class="text-xl px-2" for="horror">Horror</label><br>
+
+                    <input type="radio" name="genre" id="action" value="Action" />
+                    <label class="text-xl px-2" for="action">Action</label><br>
+
+                    <input type="radio" name="genre" id="drama" value="Drama" />
+                    <label class="text-xl px-2" for="drama">Drama</label><br>
+                </div>
+
+                <br>
+                <br>
+                <br>
+
+                <div class="CurrentMood align-left">
+                    <p class="text-3xl">
+                        What mood are you in today?
+                    </p> <br>
+                    <p class="text-2xl font-bold py-2">
+                        Pick one.
+                    </p>
+                    <div id="radio-button-wrapper">
+
+                        <span class="image-radio">
+                            <input class="radio-emoji happy" type="radio" name="radio-group" id="happy" value="happy"
+                                checked=checked />
+                            <label class="px-2" for="happy">😊</label><br>
+                        </span>
+
+                        <span class="image-radio">
+                            <input class="radio-emoji sad" type="radio" name="radio-group" id="sad" value="sad" />
+                            <label class="px-2" for="sad">😩</label><br>
+                        </span>
+
+                        <span class="image-radio"><img src="">
+                            <input class="radio-emoji mad" type="radio" name="radio-group" id="mad" value="mad" />
+                            <label class="px-2" for="mad">🤬</label><br>
+                        </span>
+
+                        <span class="image-radio"><img src="">
+                            <input class="radio-emoji indifferent" type="radio" name="radio-group" id="ok" value="ok" />
+                            <label class="px-2" for="ok">😶</label><br>
+                        </span>
+                    </div>
+
+                    <br>
+                    <br>
+
+                </div>
+
+                <!-- <button class="submit_btn" id="save-answers" type="submit" draggable="true">Submit</button> -->
+
+                <!-- Modal component -->
+                <div class="submit_btn" id="save-answers">
+                    <button id="card_open"
+                        class="py-8 px-8 mb-10 bg-green-400 hover:bg-green-300 border-gray-500 text-blue-50 hover:text-white rounded-md block">Randomize</button>
+                </div>
+
+                <div id="load_panel"
+                    class="main-modal bg-gray-300 bg-opacity-0 opacity-100 fixed w-full inset-0 z-50 overflow-hidden flex justify-center items-center hidden">
+                    <div
+                        class="load-container bg-white opacity-100 w-4/12 md:max-w-11/12 mx-auto rounded-xl z-50 overflow-y-auto">
+                        <div class="load-content py-4 text-left px-6">
+                            <div class="flex justify-between items-center pb-3">
+                                <p class="text-2xl font-bold text-gray-500">Loading...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="card_panel"
+                    class="main-modal bg-gray-300 bg-opacity-0 opacity-100 fixed w-full inset-0 z-50 overflow-hidden flex justify-center items-center hidden">
+                    <div
+                        class="modal-container bg-white opacity-100 w-4/12 md:max-w-11/12 mx-auto rounded-xl z-50 overflow-y-auto">
+                        <div class="modal-content py-4 text-left px-6">
+                            <div class="flex justify-between items-center pb-3">
+                                <p class="text-2xl font-bold text-gray-500">Your Movie Pick!</p>
+                                <div id="card_close" class="modal-close cursor-pointer z-50">
+                                    <svg class="fill-current text-gray-500" xmlns="http://www.w3.org/2000/svg"
+                                        width="18" height="18" viewBox="0 0 18 18">
+                                        <path
+                                            d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="movie-link text-xl hover:underline my-5 mr-5 ml-5 flex justify-center">
+                            </div>
+                            <div class="poster-container"></div>
+                            <div class="flex justify-end pt-2 space-x-14">
+                                <p>Enjoy!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </main>
+    </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/luxon/1.27.0/luxon.min.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 
-
-            
-           
-
-        <script src="./script.js"></script>
-        </body>
-        
-        </html>
-        
-          
-          
-          
-          
-          
-        
-          
-          
-          
-          
-          
-          
-          
-          
-          
+</html>
