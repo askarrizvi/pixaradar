@@ -96,7 +96,7 @@
                     <div class="submit_btn" id="save-answers">
                         <button id="card_open" class="py-8 px-8 mb-10 bg-green-400 hover:bg-green-300 border-gray-500 text-blue-50 hover:text-white rounded-md block">Randomize</button>
 
-                        <div id="card_panel" class="main-modal bg-gray-300 opacity-100 fixed w-full inset-0 z-50 overflow-hidden flex justify-center items-center hidden">
+                        <div id="card_panel" class="main-modal bg-gray-300 bg-opacity-0 opacity-100 fixed w-full inset-0 z-50 overflow-hidden flex justify-center items-center hidden">
                             <div class="modal-container bg-white opacity-95 w-4/12 md:max-w-11/12 mx-auto rounded-xl z-50 overflow-y-auto">
                                 <div class="modal-content py-4 text-left px-6">
                                     <div class="flex justify-between items-center pb-3">
@@ -120,42 +120,7 @@
                 </main>
             </body>
         </div>
-                    
-        <script>
-        // Modal 
-            const card_open = document.getElementById('card_open')
-            const card_close = document.getElementById('card_close')
-            const card_panel = document.getElementById('card_panel')
-
-            function modalState() {
-                if(card_panel.classList.contains('hidden')) {
-                    // Show modal
-                    card_panel.classList.remove('hidden')
-                    card_panel.classList.add('block')
-
-                    // Delete button
-                    card_open.classList.add('hidden')
-                    card_open.classList.remove('block')
-
-                    // Start animation open
-                    card_panel.classList.add('card_open')
-                } else {
-                    // Delete modal
-                    card_panel.classList.add('hidden')
-                    card_panel.classList.remove('block')
-
-                    // Show button
-                    card_open.classList.remove('hidden')
-                    card_open.classList.add('block')
-
-                    // Remove animation open
-                    card_panel.classList.remove('card_open')
-                }
-            };
-
-            card_open.addEventListener('click', modalState);
-            card_close.addEventListener('click', modalState);
-        </script>                      
+                           
 
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/luxon/1.27.0/luxon.min.js"></script>

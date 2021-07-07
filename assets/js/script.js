@@ -96,3 +96,37 @@ $("#save-answers").on('click', '#card_open', function () {
     getMovie();
 });
 
+//Modal
+const card_open = document.getElementById('card_open')
+const card_close = document.getElementById('card_close')
+const card_panel = document.getElementById('card_panel')
+
+function modalState() {
+    if(card_panel.classList.contains('hidden')) {
+        // Show modal
+        card_panel.classList.remove('hidden')
+        card_panel.classList.add('block')
+
+        // Delete button
+        card_open.classList.add('hidden')
+        card_open.classList.remove('block')
+
+        // Start animation open
+        card_panel.classList.add('card_open')
+    } else {
+        // Delete modal
+        card_panel.classList.add('hidden')
+        card_panel.classList.remove('block')
+
+        // Show button
+        card_open.classList.remove('hidden')
+        card_open.classList.add('block')
+
+        // Remove animation open
+        card_panel.classList.remove('card_open')
+    }
+};
+
+card_open.addEventListener('click', modalState);
+card_close.addEventListener('click', modalState);
+
