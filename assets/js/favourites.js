@@ -30,7 +30,7 @@ async function getMovieDetails(id) {
     fetch(apiUrl).then(function (response) {
         if (response.ok) {
             response.json().then(function (data) {
-                console.log(data);
+                //console.log(data);
                 var movieTitle = data.title;
                 var imdbId = data.imdb_id;
                 var posterUrl = data.poster_path;
@@ -49,7 +49,7 @@ async function getMovieDetails(id) {
 }
 
 function clearStorage(){
-    console.log("clk");
+    //console.log("clk");
     localStorage.clear()
     $('.favourites').empty();
 }

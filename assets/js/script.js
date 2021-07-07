@@ -26,7 +26,7 @@ function getMovie() {
         return randNumResponse.json();
     }).then(function (randNumData) {
         randNum = randNumData;
-        console.log(randNum);
+        //console.log(randNum);
         var apiUrl = "https://api.themoviedb.org/3/movie/" + randNum + "?api_key="+apiKey;
         return fetch(apiUrl).then(function (response) {
             if (response.ok) {
@@ -34,21 +34,21 @@ function getMovie() {
                     for (i = 0; i < data.genres.length; i++) {
                         genreArray.push(data.genres[i].name);
                     }
-                    console.log("GA: " + genreArray);
-                    console.log(foundMovie);
+                    //console.log("GA: " + genreArray);
+                    //console.log(foundMovie);
                     if (data.adult == true) {
-                        console.log("Adult movie");
+                        //console.log("Adult movie");
                         getMovie();
                     }
                     for (i = 0; i < userGenre.length; i++) {
-                        console.log("UGi: " + userGenre[i]);
+                        //console.log("UGi: " + userGenre[i]);
                         if (genreArray.includes(userGenre[i]) && (!foundMovie)) {
-                            console.log(data);
+                            //console.log(data);
                             foundMovie = true;
                             var movieTitle = data.title;
                             var imdbId = data.imdb_id;
                             var poster = data.poster_path;
-                            console.log(poster);
+                            //console.log(poster);
                             //$(".loading-text").hide();
                             $(".movie-link").append('<a href="https://www.imdb.com/title/' + imdbId + '">' + movieTitle + '</a>');
                             $(".poster-container").append('<img class="md:object-scale-down h-48" id="theImg" src="https://image.tmdb.org/t/p/original/' + poster + '" />');
@@ -58,7 +58,7 @@ function getMovie() {
                         }
                     }
                     if (!foundMovie) {
-                        console.log("here");
+                       // console.log("here");
                         getMovie();
                     }
 
@@ -103,8 +103,8 @@ $("#save-answers").on('click', '#card_open', function () {
 });
 
 function addToFav(){
-    console.log("clicked fav");
-    console.log("last movie id: "+lastMovieId);
+    //console.log("clicked fav");
+    //console.log("last movie id: "+lastMovieId);
     var favArr = JSON.parse(localStorage.getItem("favourites"));
     if(!favArr){
         favArr=[];
@@ -143,7 +143,7 @@ function loadingModal() {
 
 function modalState() {
     if (card_panel.classList.contains('hidden')) {
-        console.log("opening modal");
+        //console.log("opening modal");
         // Show modal
         card_panel.classList.remove('hidden')
         card_panel.classList.add('block')
