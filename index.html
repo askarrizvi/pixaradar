@@ -18,13 +18,14 @@
     <header class="bg-white bg-opacity-70 mb-10 flex">
         <nav class="flex items-center justify-between flex-wrap p-6">
             <div class="flex items-center flex-shrink-0 text-black mr-6">
-              <span class="font-semibold text-4xl tracking-tight">PixaRadar</span>
+                <a href="index.html" class="font-semibold text-4xl tracking-tight">PixaRadar</a>
             </div>
             <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-              <div>
-                <a href="#" class="inline-block text-sm px-4 py-2 leading-none border-4 rounded text-red border-red hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Favourites</a>
-            </div>
-          </nav>
+                <div>
+                    <a href="favourites.html"
+                        class="inline-block text-sm px-4 py-2 leading-none border-4 rounded text-red border-red hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Favourites</a>
+                </div>
+        </nav>
     </header>
 
     <div class="form-container grid grid-cols-1 m-20">
@@ -107,8 +108,11 @@
                 <div class="movie-link text-xl hover:underline my-5 mr-5 ml-5 flex justify-center">
                 </div>
                 <div class="poster-container flex flex-col justify-center items-center"></div>
-                <div class="flex justify-end pt-2 space-x-14">
-                    <p>Enjoy!</p>
+                <div class="fav-container flex flex-col justify-center items-center mt-5">
+                    <svg id="fav-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path
+                            d="M12 4.419c-2.826-5.695-11.999-4.064-11.999 3.27 0 7.27 9.903 10.938 11.999 15.311 2.096-4.373 12-8.041 12-15.311 0-7.327-9.17-8.972-12-3.27z" />
+                    </svg>
                 </div>
             </div>
         </div>
