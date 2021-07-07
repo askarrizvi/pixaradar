@@ -4,6 +4,7 @@ var buttonEl = document.getElementById("#save-answers");
 var userGenre = [];
 var mood;
 var foundMovie = false;
+var lastMovieId;
 
 function getMovie() {
     //var validMovie = false;
@@ -52,6 +53,7 @@ function getMovie() {
                             $(".movie-link").append('<a href="https://www.imdb.com/title/' + imdbId + '">' + movieTitle + '</a>');
                             $(".poster-container").append('<img class="md:object-scale-down h-48" id="theImg" src="https://image.tmdb.org/t/p/original/' + poster + '" />');
                             modalState();
+                            lastMovieId = randNum;
                             break;
                         }
                     }
@@ -100,11 +102,28 @@ $("#save-answers").on('click', '#card_open', function () {
     getMovie();
 });
 
+function addToFav(){
+    console.log("clicked fav");
+    console.log("last movie id: "+lastMovieId);
+    var favArr = JSON.parse(localStorage.getItem("favourites"));
+    if(!favArr){
+        favArr=[];
+    }
+    if (!favArr.includes(lastMovieId)){
+    favArr.unshift(lastMovieId);
+    localStorage.setItem("favourites", JSON.stringify(favArr));
+    }
+    else {
+        alert("Movie is already in your favourites!");
+    }
+}
+
 //Modal
 const card_open = document.getElementById('card_open')
 const card_close = document.getElementById('card_close')
 const card_panel = document.getElementById('card_panel')
 const load_panel = document.getElementById('load_panel')
+const fav_icon = document.getElementById('fav-icon');
 
 function loadingModal() {
     if (load_panel.classList.contains('hidden')) {
@@ -155,4 +174,6 @@ function modalState() {
 
 card_open.addEventListener('click', loadingModal);
 card_close.addEventListener('click', modalState);
+fav_icon.addEventListener('click', addToFav);
+
 
