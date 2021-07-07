@@ -29,16 +29,6 @@
                 </div> -->
     
                 <main class="px-10 py-5 w-full flex flex-col content-center items-center h-screen">
-                
-<<<<<<< HEAD
-                    <!-- <section>
-                        <img src=".image/popcorn.jpeg"  alt="popcorn" width="300px" height="250px">
-                    </section> -->
-=======
-                  
->>>>>>> 5401136d6d90d7320ce254081d8bafd532681021
-        
-            
                     <div class = "Genre">          
                         <p class="text-3xl">
                             What Genre are you interested in today?
@@ -48,20 +38,17 @@
                             Pick one.
                         </p>
 
-                        <input type="radio" name="genre" id="" checked=checked />
-                        <label class="text-xl px-2" for="genre">Comedy</label><br>
+                        <input type="radio" name="genre" id="comedy" value="Comedy" checked=checked />
+                        <label class="text-xl px-2" for="comedy">Comedy</label><br>
                 
-                        <input type="radio" name="genre" id="" />
-                        <label class="text-xl px-2" for="genre-horror">Horror</label><br>
+                        <input type="radio" name="genre" id="horror" value="Horror"/>
+                        <label class="text-xl px-2" for="horror">Horror</label><br>
                 
-                        <input type="radio" name="genre" id="" />
-                        <label class="text-xl px-2" for="genre">Action</label><br>
+                        <input type="radio" name="genre" id="action" value="Action"/>
+                        <label class="text-xl px-2" for="action">Action</label><br>
             
-                        <input type="radio" name="genre" id="" />
-                        <label class="text-xl px-2" for="genre">Drama</label><br>
-
-                        <input type="radio" name="genre" id="" />
-                        <label class="text-xl px-2" for="sction">Adult</label><br>
+                        <input type="radio" name="genre" id="drama" value="Drama"/>
+                        <label class="text-xl px-2" for="drama">Drama</label><br>
                     </div> 
 
                     <br>
@@ -78,23 +65,23 @@
                         <div id="radio-button-wrapper">
 
                             <span class="image-radio">
-                            <input class="radio-emoji happu" type="radio" name="radio-group" id="radio" value="html" checked=checked/>
-                            <label class="px-2" for="radio-1">😊</label><br>                                
+                            <input class="radio-emoji happu" type="radio" name="radio-group" id="happy" value="happy" checked=checked/>
+                            <label class="px-2" for="happy">😊</label><br>                                
                             </span>
 
                             <span class="image-radio">
-                            <input class="radio-emoji sad" type="radio" name="radio-group" id="radio" value="html" />
-                            <label class="px-2" for="radio-2">😩</label><br>
+                            <input class="radio-emoji sad" type="radio" name="radio-group" id="sad" value="sad" />
+                            <label class="px-2" for="sad">😩</label><br>
                             </span>
 
                             <span class="image-radio"><img src="">
-                            <input class="radio-emoji mad" type="radio" name="radio-group" id="radio" value="html" />
-                            <label class="px-2" for="radio-3">🤬</label><br>                            
+                            <input class="radio-emoji mad" type="radio" name="radio-group" id="mad" value="mad" />
+                            <label class="px-2" for="mad">🤬</label><br>                            
                             </span>
 
                             <span class="image-radio"><img src="">
-                            <input class="radio-emoji indifferent" type="radio" name="radio-group" id="radio" value="html" />
-                            <label class="px-2" for="radio-3">😶</label><br>                                
+                            <input class="radio-emoji indifferent" type="radio" name="radio-group" id="ok" value="ok" />
+                            <label class="px-2" for="ok">😶</label><br>                                
                             </span>
                         </div>
 
@@ -106,10 +93,10 @@
                     <!-- <button class="submit_btn" id="save-answers" type="submit" draggable="true">Submit</button> -->
 
                     <!-- Modal component -->          
-                    <!-- <div class="submit_btn" id="save-answers"> -->
-                        <button id="card_open" class="py-8 px-8 mb-10 bg-green-400 hover:bg-green-300 border-gray-500 text-blue-50 hover:text-white rounded-md block">Open a modal</button>
+                    <div class="submit_btn" id="save-answers">
+                        <button id="card_open" class="py-8 px-8 mb-10 bg-green-400 hover:bg-green-300 border-gray-500 text-blue-50 hover:text-white rounded-md block">Randomize</button>
 
-                        <div id="card_panel" class="main-modal bg-gray-300 opacity-70 fixed w-full inset-0 z-50 overflow-hidden flex justify-center items-center hidden">
+                        <div id="card_panel" class="main-modal bg-gray-300 opacity-100 fixed w-full inset-0 z-50 overflow-hidden flex justify-center items-center hidden">
                             <div class="modal-container bg-white opacity-95 w-4/12 md:max-w-11/12 mx-auto rounded-xl z-50 overflow-y-auto">
                                 <div class="modal-content py-4 text-left px-6">
                                     <div class="flex justify-between items-center pb-3">
@@ -129,7 +116,7 @@
                                 </div>
                             </div>
                         </div>
-                    <!-- </div> -->
+                    </div> 
                 </main>
             </body>
         </div>

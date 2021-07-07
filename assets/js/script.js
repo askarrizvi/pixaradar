@@ -7,10 +7,10 @@ var foundMovie = false;
 
 function getMovie() {
     //var validMovie = false;
-    var loading = $('div');
+   /* var loading = $('div');
     loading.addClass("loading-text");
     loading.text = "Loading";
-   // $(".loading-con").append(loading);
+   // $(".loading-con").append(loading);*/
 
 
     var genreArray = [];
@@ -33,21 +33,21 @@ function getMovie() {
                     for (i = 0; i < data.genres.length; i++) {
                         genreArray.push(data.genres[i].name);
                     }
-                    console.log("GA "+genreArray);
+                    console.log("GA: "+genreArray);
                     console.log(foundMovie);
                     if (data.adult == true) {
                         console.log("Adult movie");
                         getMovie();
                     } 
                         for (i = 0; i < userGenre.length; i++) {
-                            console.log("UGi "+userGenre[i]);
+                            console.log("UGi: "+userGenre[i]);
                             if (genreArray.includes(userGenre[i])&&(!foundMovie)) {
                                 console.log(data);
                                 foundMovie = true;
                                 var poster = data.poster_path;
                                 console.log(poster);
                                 //$(".loading-text").hide();
-                                $(".container").append('<img id="theImg" src="https://image.tmdb.org/t/p/original/'+poster+'" />');
+                                $(".modal-content").append('<img id="theImg" src="https://image.tmdb.org/t/p/original/'+poster+'" />');
                                 break;
                             }
                         }
@@ -82,7 +82,7 @@ function getMoodGenre(mood) {
     }
 }
 
-$("#save-answers").click(function () {
+$("#save-answers").on('click', '#card_open', function () {
     userGenre = [];
     foundMovie = false;
     userGenre.push($('input[name=genre]:checked').val());
@@ -91,7 +91,7 @@ $("#save-answers").click(function () {
     if (!userGenre.includes(getMoodGenre(mood))) {
         userGenre.push(getMoodGenre(mood));
     }
-    console.log("UG "+userGenre);
+    console.log("UG: "+userGenre);
     //debugger
     getMovie();
 });
