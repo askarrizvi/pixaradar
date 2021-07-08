@@ -12,16 +12,21 @@ function displayMovie(movObj) {
     var favLink = $('<a>')
     var favRow = $('<span>');
     var favText = $('<div>');
+    var delCon = $('<div>');
+    delCon.addClass('delete-container mt-20')
+    delCon.append('<button id="clear" class="py-2 px-2 bg-red-400 hover:bg-red-300 border-gray-500 text-blue-50 hover:text-white rounded-md block">Delete</button>')
     favLink.attr('href', 'https://www.imdb.com/title/' + movObj.imdb);
-    favLink.addClass('p-10 mb-2 border-2 border-black')
-    favText.addClass('ml-10')
-    favRow.addClass('flex')
+    favLink.addClass('flex p-10 mb-2')
+    favText.addClass('ml-10 mt-20 text-2xl')
+    favRow.addClass('grid grid-rows-1 border-2 border-black')
     var movieImg = '<img class="md:object-scale-down h-48" id="theImg" src="https://image.tmdb.org/t/p/original/' + movObj.poster + '" />';
     favText.text(movObj.title);
-    favRow.append(movieImg);
     favRow.append(favText);
-    favLink.append(favRow);
-    $('.favourites').append(favLink);
+    favLink.append(movieImg);
+    favLink.append(favText);
+    favRow.append(favLink);
+    favRow.append(delCon);
+    $('.favourites').append(favRow);
 }
 
 async function getMovieDetails(id) {
