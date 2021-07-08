@@ -27,7 +27,7 @@ function getMovie() {
     }).then(function (randNumData) {
         randNum = randNumData;
         //console.log(randNum);
-        var apiUrl = "https://api.themoviedb.org/3/movie/" + randNum + "?api_key="+apiKey;
+        var apiUrl = "https://api.themoviedb.org/3/movie/" + randNum + "?api_key=" + apiKey;
         return fetch(apiUrl).then(function (response) {
             if (response.ok) {
                 response.json().then(function (data) {
@@ -43,7 +43,7 @@ function getMovie() {
                     for (i = 0; i < userGenre.length; i++) {
                         //console.log("UGi: " + userGenre[i]);
                         if (genreArray.includes(userGenre[i]) && (!foundMovie)) {
-                            //console.log(data);
+                            console.log(data);
                             foundMovie = true;
                             var movieTitle = data.title;
                             var imdbId = data.imdb_id;
@@ -58,7 +58,7 @@ function getMovie() {
                         }
                     }
                     if (!foundMovie) {
-                       // console.log("here");
+                        // console.log("here");
                         getMovie();
                     }
 
@@ -102,20 +102,20 @@ $("#save-answers").on('click', '#card_open', function () {
     getMovie();
 });
 
-function addToFav(){
+function addToFav() {
     //console.log("clicked fav");
     //console.log("last movie id: "+lastMovieId);
     var favArr = JSON.parse(localStorage.getItem("favourites"));
-    if(!favArr){
-        favArr=[];
+    if (!favArr) {
+        favArr = [];
     }
-    if (!favArr.includes(lastMovieId)){
-    favArr.unshift(lastMovieId);
-    localStorage.setItem("favourites", JSON.stringify(favArr));
-    alert("Saved!");
+    if (!favArr.includes(lastMovieId)) {
+        favArr.unshift(lastMovieId);
+        localStorage.setItem("favourites", JSON.stringify(favArr));
+        alertModal("Saved!");
     }
     else {
-        alert("Movie is already in your favourites!");
+        alertModal("Movie is already in your favourites!");
     }
 }
 
@@ -125,6 +125,9 @@ const card_close = document.getElementById('card_close')
 const card_panel = document.getElementById('card_panel')
 const load_panel = document.getElementById('load_panel')
 const fav_icon = document.getElementById('fav-icon');
+const alert_panel = document.getElementById('alert_panel')
+const alert_close = document.getElementById('alert-close');
+//const alert_text = document.getElementById('alert-text');
 
 function loadingModal() {
     if (load_panel.classList.contains('hidden')) {
@@ -140,6 +143,44 @@ function loadingModal() {
         card_panel.classList.add('card_open')
     }
 }
+
+function alertModal(alertText) {
+    if (alert_panel.classList.contains('hidden')) {
+        $('.alert-text').empty();
+        $('.alert-text').append(alertText);
+
+        // Delete modal
+        card_panel.classList.add('hidden')
+        card_panel.classList.remove('block')
+
+        // Show button
+        card_open.classList.remove('hidden')
+        card_open.classList.add('block')
+
+        // Remove animation open
+        card_panel.classList.remove('card_open')
+
+
+        //$('')
+        // Show modal
+        alert_panel.classList.remove('hidden')
+        alert_panel.classList.add('block')
+
+        // Start animation open
+        alert_panel.classList.add('card_open')
+    }
+    else {
+        // Delete modal
+        alert_panel.classList.add('hidden')
+        alert_panel.classList.remove('block')
+
+        // Remove animation open
+        alert_panel.classList.remove('card_open')
+        $(".movie-link").empty();
+        $(".poster-container").empty();
+    }
+}
+
 
 function modalState() {
     if (card_panel.classList.contains('hidden')) {
@@ -176,5 +217,7 @@ function modalState() {
 card_open.addEventListener('click', loadingModal);
 card_close.addEventListener('click', modalState);
 fav_icon.addEventListener('click', addToFav);
+
+$(".alert-container").on('click', '#alert-close', alertModal);
 
 
