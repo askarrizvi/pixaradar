@@ -1,10 +1,11 @@
 const apiKey = "917cef113b241cde7141b1d0182ae920";
-const clearBtn = document.getElementById('clear');
 
 function populateFavs() {
     var favArr = JSON.parse(localStorage.getItem("favourites"));
-    for (i = 0; i < favArr.length; i++) {
-        getMovieDetails(favArr[i]);
+    if (favArr) {
+        for (i = 0; i < favArr.length; i++) {
+            getMovieDetails(favArr[i]);
+        }
     }
 }
 
@@ -13,12 +14,13 @@ function displayMovie(movObj) {
     var favRow = $('<span>');
     var favText = $('<div>');
     var delCon = $('<div>');
-    delCon.addClass('delete-container mt-20')
-    delCon.append('<button id="clear" class="py-2 px-2 bg-red-400 hover:bg-red-300 border-gray-500 text-blue-50 hover:text-white rounded-md block">Delete</button>')
+    delCon.addClass('delete-container m-auto');
+    delCon.append('<button id="delete" class="py-2 px-2 bg-black hover:bg-gray-700 border-gray-500 text-blue-50 hover:text-white rounded-md block">Delete</button>');
     favLink.attr('href', 'https://www.imdb.com/title/' + movObj.imdb);
-    favLink.addClass('flex p-10 mb-2')
-    favText.addClass('ml-10 mt-20 text-2xl')
-    favRow.addClass('grid grid-rows-1 border-2 border-black')
+    favLink.addClass('flex p-5 mb-2');
+    favText.addClass('ml-10 mt-20 text-2xl');
+    favRow.addClass('flex m-3 h-auto align-middle border-2 border-black');
+    favRow.attr('id', movObj.id);
     var movieImg = '<img class="md:object-scale-down h-48" id="theImg" src="https://image.tmdb.org/t/p/original/' + movObj.poster + '" />';
     favText.text(movObj.title);
     favRow.append(favText);
@@ -40,6 +42,7 @@ async function getMovieDetails(id) {
                 var imdbId = data.imdb_id;
                 var posterUrl = data.poster_path;
                 movObj = {
+                    id: id,
                     title: movieTitle,
                     imdb: imdbId,
                     poster: posterUrl
@@ -53,12 +56,24 @@ async function getMovieDetails(id) {
     });
 }
 
-function clearStorage(){
-    //console.log("clk");
+function clearStorage() {
     localStorage.clear()
     $('.favourites').empty();
 }
 
 populateFavs();
 
-clearBtn.addEventListener('click', clearStorage);
+//clearBtn.addEventListener('click', clearStorage);
+$(".fav-container").on('click', '#clear', clearStorage);
+$(".fav-container").on('click', '#delete', function () {
+    var thisId = $(this).parent().parent().attr('id');
+    $(this).parent().parent().remove();
+    var favArr = JSON.parse(localStorage.getItem("favourites"));
+    var updatedFav = [];
+    for (i=0; i<favArr.length; i++){
+        if (favArr[i] !== parseInt(thisId)){
+            updatedFav.push(favArr[i]);
+        }
+    }
+    localStorage.setItem("favourites", JSON.stringify(updatedFav));
+});
