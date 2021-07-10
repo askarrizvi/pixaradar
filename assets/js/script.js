@@ -78,6 +78,7 @@ function getMovie() {
                     //For each movie genre, check if that genre matches one of the user selected genres
                     //If the genres match, populate the results page and display the result modal
                     //Set foundMovie boolean to true and store the movie ID(for favouriting purposes)
+                    //Make the movie title a link which will bring the user to the IMDB page of the movie
                     for (i = 0; i < userGenre.length; i++) {
                         if (genreArray.includes(userGenre[i]) && (!foundMovie)) {
                             console.log(data);
