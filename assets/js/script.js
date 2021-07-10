@@ -1,10 +1,17 @@
 const apiKey = "917cef113b241cde7141b1d0182ae920";
+const DateTime = luxon.DateTime;
+var now = DateTime.now();
 var containerEl = document.querySelector(".container");
 var buttonEl = document.getElementById("#save-answers");
 var userGenre = [];
 var mood;
 var foundMovie = false;
 var lastMovieId;
+
+function selectBoxes(){
+    console.log(now.hour);
+    
+}
 
 function getMovie() {
     //var validMovie = false;
@@ -41,7 +48,7 @@ function getMovie() {
                         getMovie();
                     }
                     for (i = 0; i < userGenre.length; i++) {
-                        //console.log("UGi: " + userGenre[i]);
+                        console.log("UGi: " + userGenre[i]);
                         if (genreArray.includes(userGenre[i]) && (!foundMovie)) {
                             console.log(data);
                             foundMovie = true;
@@ -219,5 +226,6 @@ card_close.addEventListener('click', modalState);
 fav_icon.addEventListener('click', addToFav);
 
 $(".alert-container").on('click', '#alert-close', alertModal);
+$(".form-container").on('click', '.genre-cb', alertModal);
 
-
+selectBoxes();
