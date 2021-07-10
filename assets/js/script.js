@@ -10,7 +10,34 @@ var lastMovieId;
 
 function selectBoxes(){
     console.log(now.hour);
-    
+    if (now.hour>=6&&now.hour<=11){
+        $('.genretext').append("Good morning!");
+        $('#action').attr('checked','checked');
+        $('#adventure').attr('checked','checked');
+        $('#family').attr('checked','checked');
+        userGenre = ["Action","Adventure","Family"];
+    }
+    else if (now.hour>=12&&now.hour<=17){
+        $('.genretext').append("Good afternoon!");
+        $('#comedy').attr('checked','checked');
+        $('#action').attr('checked','checked');
+        $('#adventure').attr('checked','checked');
+        $('#family').attr('checked','checked');
+        $('#fantasy').attr('checked','checked');
+        userGenre = ["Action","Adventure","Family","Comedy","Fantasy"];
+    } 
+    else if (now.hour>=18&&now.hour<=5){
+        $('.genretext').append("Good evening!");
+        $('#action').attr('checked','checked');
+        $('#adventure').attr('checked','checked');
+        $('#fantasy').attr('checked','checked');
+        $('#thriller').attr('checked','checked');
+        $('#horror').attr('checked','checked');
+        $('#romance').attr('checked','checked');
+        $('#history').attr('checked','checked');
+        $('#drama').attr('checked','checked');
+        userGenre = ["Action","Adventure","Fantasy","Thriller","Horror","Romance","History","Drama"];
+    } 
 }
 
 function getMovie() {
@@ -96,8 +123,7 @@ function getMoodGenre(mood) {
 }
 
 function addUserGenre(genre){
-    console.log(genre);
-    if (!userGenre.includes(getMoodGenre(genre))) {
+    if (!userGenre.includes(genre)) {
         userGenre.push(genre);
     }
 }
@@ -109,6 +135,7 @@ $("#save-answers").on('click', '#card_open', function () {
 
     //console.log("UG: " + userGenre);
     //debugger
+    console.log(userGenre);
     getMovie();
 });
 
@@ -232,12 +259,12 @@ $(".alert-container").on('click', '#alert-close', alertModal);
 $(".form-container").on('click', '.genre-cb', function(){
     if($(this).prop("checked")){
         addUserGenre($(this).attr('value'));
-        console.log(userGenre);
+       // console.log(userGenre);
     }
     else{
         var removeInd = userGenre.indexOf($(this).attr('value'));
         userGenre.splice(removeInd, 1);
-        console.log(userGenre);
+        //console.log(userGenre);
     }
 });
 
