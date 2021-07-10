@@ -95,15 +95,18 @@ function getMoodGenre(mood) {
     }
 }
 
-$("#save-answers").on('click', '#card_open', function () {
-    userGenre = [];
-    foundMovie = false;
-    userGenre.push($('input[name=genre]:checked').val());
-    mood = $('input[name=radio-group]:checked').val();
-    //userGenre.push(getMoodGenre(mood));
-    if (!userGenre.includes(getMoodGenre(mood))) {
-        userGenre.push(getMoodGenre(mood));
+function addUserGenre(genre){
+    console.log(genre);
+    if (!userGenre.includes(getMoodGenre(genre))) {
+        userGenre.push(genre);
     }
+}
+
+$("#save-answers").on('click', '#card_open', function () {
+    foundMovie = false;
+    mood = $('input[name=radio-group]:checked').val();
+        addUserGenre(getMoodGenre(mood));
+
     //console.log("UG: " + userGenre);
     //debugger
     getMovie();
@@ -226,6 +229,16 @@ card_close.addEventListener('click', modalState);
 fav_icon.addEventListener('click', addToFav);
 
 $(".alert-container").on('click', '#alert-close', alertModal);
-$(".form-container").on('click', '.genre-cb', alertModal);
+$(".form-container").on('click', '.genre-cb', function(){
+    if($(this).prop("checked")){
+        addUserGenre($(this).attr('value'));
+        console.log(userGenre);
+    }
+    else{
+        var removeInd = userGenre.indexOf($(this).attr('value'));
+        userGenre.splice(removeInd, 1);
+        console.log(userGenre);
+    }
+});
 
 selectBoxes();
