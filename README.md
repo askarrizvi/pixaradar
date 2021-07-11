@@ -1,10 +1,10 @@
-# PIXA RADAR
+#PixaRadar
 
-## Discreption 
-A web page that uses TMDB API key, which is a database for movies to select a random movie from a genre you pick, Once randomized it will display your random movie with the ability of saving it to your list of favourites. 
+An app that uses a TMDB API key, which is a database for movies. It randomly selects a movie based on mood, and picks the genre based on the time of day.
 
 ## Motivation 
-our motivation for this app, is to have one less decision you have to make in your day.
+Our motivation for this app, was to have one less decision to make. Let technology make the decision for us.
+
 
 ## Built With
 * HTML
@@ -14,16 +14,17 @@ our motivation for this app, is to have one less decision you have to make in yo
 * Jquery 
 * TMDB API
 * random.org API
-* unsplash API
-* postman to test APIs
+* Unsplash API
+* Postman to test APIs
+* Luxon
 
 ## Website
-![image](https://user-images.githubusercontent.com/16021994/125178350-0d63ba80-e1b2-11eb-8956-dda2676816d6.png)
+![image](https://github.com/askarrizvi/project1/deployments/activity_log?environment=github-pages)
 URL:
 
 ## Contribution
-Made with ❤️ by 
+Made with 😓😳😤❤️ by 
 * Scott skinn.
 * Joanne Hickey.
-* Askar Ravizi.
+* Askar Razvi.
 * Waleed Touqan.
