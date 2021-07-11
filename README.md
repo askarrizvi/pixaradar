@@ -1,4 +1,29 @@
-# Front-end project1
-## Paxa Radar
-This project is a Movies Web-app, built to interact with the user to make it easier for them to find a movie depending on the genre they choose, and their mood. 
-Built using HTML5, CSS, Javascript and Tailwind.
+## PixaRadar
+
+An app that uses a TMDB API key, which is a database for movies. It randomly selects a movie based on mood, and picks the genre based on the time of day.
+
+## Motivation 
+Our motivation for this app, was to have one less decision to make. Let technology make the decision for us.
+
+
+## Built With
+* HTML
+* CSS
+* Javascript
+* Tailwind CSS
+* Jquery 
+* TMDB API
+* random.org API
+* Unsplash API
+* Postman to test APIs
+* Luxon
+
+## Website:https://askarrizvi.github.io/project1/ 
+
+
+## Contribution
+Made with 😓😳😤❤️ by 
+* Scott skinn.
+* Joanne Hickey.
+* Askar Razvi.
+* Waleed Touqan.

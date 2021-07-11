@@ -13,8 +13,8 @@
 
 
 
-<body class="items-center">
-
+<body class="fav-container items-center">
+    <!--Navbar with link to home page and saved movies-->
     <header class="bg-white bg-opacity-70 mb-10 flex">
         <nav class="flex items-center justify-between flex-wrap p-6">
             <div class="flex items-center flex-shrink-0 text-black mr-6">
@@ -27,14 +27,16 @@
                 </div>
         </nav>
     </header>
-
+    <!--Center the movies saved in a container-->
     <div class="grid grid-cols-1 mt-10" id="fav-container">
         <div class="favourites mx-20 flex flex-col bg-white bg-opacity-80 p-5 items-left justify-center"></div>
     </div>
 
+    <!--clear favorites button-->
     <div class="clear_btn flex flex-col items-center justify-center mt-3" id="save-answers">
         <button id="clear"
-            class="py-8 px-8 mb-10 bg-red-400 hover:bg-red-300 border-gray-500 text-blue-50 hover:text-white rounded-md block">Clear Favourites</button>
+            class="py-8 px-8 mb-10 bg-red-400 hover:bg-red-300 border-gray-500 text-blue-50 hover:text-white rounded-md block">Clear
+            Favourites</button>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
