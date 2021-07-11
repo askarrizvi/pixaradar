@@ -20,7 +20,6 @@ var lastMovieId;
 //Use the current hour to compare and populate
 //the userGenre array
 function selectBoxes(){
-    console.log(now.hour);
     if (now.hour>=6&&now.hour<=11){
         $('.genretext').append("Good morning!");
         $('#action').attr('checked','checked');
@@ -82,7 +81,6 @@ function getMovie() {
                     //Make the movie title a link which will bring the user to the IMDB page of the movie
                     for (i = 0; i < userGenre.length; i++) {
                         if (genreArray.includes(userGenre[i]) && (!foundMovie)) {
-                            console.log(data);
                             foundMovie = true;
                             var movieTitle = data.title;
                             var imdbId = data.imdb_id;
