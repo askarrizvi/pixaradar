@@ -88,7 +88,7 @@ function getMovie() {
                             $(".movie-link").append('<a href="https://www.imdb.com/title/' + imdbId + '">' + movieTitle + '</a>');
                             $(".poster-container").append('<img class="md:object-scale-down h-48" id="theImg" src="https://image.tmdb.org/t/p/original/' + poster + '" />');
                             modalState();
-                            lastMovieId = randNum;
+                            lastMovieId = randNum;                            
                             break;
                         }
                     }
