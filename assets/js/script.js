@@ -20,6 +20,7 @@ var lastMovieId;
 //Use the current hour to compare and populate
 //the userGenre array
 function selectBoxes(){
+    console.log(now.hour);
     if (now.hour>=6&&now.hour<=11){
         $('.genretext').append("Good morning!");
         $('#action').attr('checked','checked');
@@ -36,7 +37,7 @@ function selectBoxes(){
         $('#fantasy').attr('checked','checked');
         userGenre = ["Action","Adventure","Family","Comedy","Fantasy"];
     } 
-    else if (now.hour>=18&&now.hour<=5){
+    else if (now.hour>=18||now.hour<=5){
         $('.genretext').append("Good evening!");
         $('#action').attr('checked','checked');
         $('#adventure').attr('checked','checked');
