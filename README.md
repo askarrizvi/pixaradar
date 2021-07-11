@@ -25,7 +25,7 @@ Our motivation for this app, was to have one less decision to make. Let technolo
 
 ## Contribution
 Made with 😓😳😤❤️ by 
-* Scott skinn.
+* Scott Skinn.
 * Joanne Hickey.
 * Askar Rizvi.
 * Waleed Touqan.
