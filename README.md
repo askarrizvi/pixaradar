@@ -1,4 +1,4 @@
-##PixaRadar
+## PixaRadar
 
 An app that uses a TMDB API key, which is a database for movies. It randomly selects a movie based on mood, and picks the genre based on the time of day.
 
@@ -18,7 +18,7 @@ Our motivation for this app, was to have one less decision to make. Let technolo
 * Postman to test APIs
 * Luxon
 
-## Website:https://askarrizvi.github.io/project1/![image]("./demo.jpg")
+## Website:https://askarrizvi.github.io/project1/ 
 
 
 ## Contribution
