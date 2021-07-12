@@ -18,9 +18,10 @@ Our motivation for this app, was to have one less decision to make. Let technolo
 * Postman to test APIs
 * Luxon
 
-## Website:https://askarrizvi.github.io/project1/ 
-
-## The Power Point Presentation: PixaRadar.pdf
+## Website :https://askarrizvi.github.io/project1/
+![image](https://user-images.githubusercontent.com/16021994/125228449-c0134600-e2a2-11eb-8c7b-d520668bc77d.png)
+ 
+ ## The Power Point Presentation: PixaRadar.pdf
 
 
 ## Contribution
